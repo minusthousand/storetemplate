@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+Mihails Tumaševičs mt19031
+-->
+<html lang="en">
+  <head>
+    <title>MTSTORE</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <h3>MTSTORE</h3>
+        <div class="logo"></div>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html" id="home">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="sale.html" id="sale">SALE</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="about.html" id="about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="register.html" id="Register">Register</a>
+          </li>
+        </ul>
+        <div class="close" onclick="fadeOut()">
+          <div class="close__line"></div>
+          <div class="close__line"></div>
+        </div>
+      </nav>
+
+      <div class="burger" onclick="fadeIn()">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </div>
+    </header>
+
+    <div class="main-coll">
+      <h1>50% OFF</h1>
+      <p>UP TO</p>
+    </div>
+
+    <div class="banner">SALE</div>
+
+    <main id="main" class="rcb">
+      <div class="rcb-cmp-list">
+        <div class="rcb-cmp-item">
+          <div class="rcb-cmp-item-cnt">
+            <img src="product.jpg" alt="Something went wrong" />
+            <div class="product-name">Product</div>
+            <br />
+            <div class="strike">39.99€</div>
+            <div class="price">19.99€</div>
+          </div>
+        </div>
+        <div class="rcb-cmp-item">
+          <div class="rcb-cmp-item-cnt">
+            <img src="product.jpg" alt="Something went wrong" />
+            <div class="product-name">Product</div>
+            <br />
+            <div class="strike">39.99€</div>
+            <div class="price">19.99€</div>
+          </div>
+        </div>
+        <div class="rcb-cmp-item">
+          <div class="rcb-cmp-item-cnt">
+            <img src="product.jpg" alt="Something went wrong" />
+            <div class="product-name">Product</div>
+            <br />
+            <div class="strike">39.99€</div>
+            <div class="price">19.99€</div>
+          </div>
+        </div>
+        <div class="rcb-cmp-item">
+          <div class="rcb-cmp-item-cnt">
+            <img src="product.jpg" alt="Something went wrong" />
+            <div class="product-name">Product</div>
+            <br />
+            <div class="strike">39.99€</div>
+            <div class="price">19.99€</div>
+          </div>
+        </div>
+        <div class="rcb-cmp-item">
+          <div class="rcb-cmp-item-cnt">
+            <img src="product.jpg" alt="Something went wrong" />
+            <div class="product-name">Product</div>
+            <br />
+            <div class="strike">39.99€</div>
+            <div class="price">19.99€</div>
+          </div>
+        </div>
+        <div class="rcb-cmp-item">
+          <div class="rcb-cmp-item-cnt">
+            <img src="product.jpg" alt="Something went wrong" />
+            <div class="product-name">Product</div>
+            <br />
+            <div class="strike">39.99€</div>
+            <div class="price">19.99€</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

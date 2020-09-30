@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+Mihails Tumaševičs mt19031
+-->
+<html lang="en">
+  <head>
+    <title>MTSTORE</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <h3>MTSTORE</h3>
+        <div class="logo"></div>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html" id="home">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="sale.html" id="sale">SALE</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="about.html" id="about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="register.html" id="Register">Register</a>
+          </li>
+        </ul>
+        <div class="close" onclick="fadeOut()">
+          <div class="close__line"></div>
+          <div class="close__line"></div>
+        </div>
+      </nav>
+
+      <div class="burger" onclick="fadeIn()">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </div>
+    </header>
+
+    <div class="main-coll">
+      <h1>Register</h1>
+    </div>
+    <div class="forms">
+      <form
+        name="regForm"
+        action="http://naivist.net/form"
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <h3>Gender:</h3>
+        <br />
+        <label class="container"
+          >Male
+          <input type="radio" name="gender" value="male" id="male" checked />
+          <span class="checkmark-radio"></span>
+        </label>
+        <label class="container"
+          >Female
+          <input type="radio" name="gender" value="female" id="female" />
+          <span class="checkmark-radio"></span>
+        </label>
+        <h3>First name:</h3>
+        <br />
+        <input
+          type="text"
+          class="input-text"
+          name="firstname"
+          id="fname"
+        /><br />
+        <h3>Last name:</h3>
+        <br />
+        <input
+          type="text"
+          class="input-text"
+          name="lastname"
+          id="lname"
+        /><br />
+        <h3>Email address:</h3>
+        <br />
+        <input type="text" class="input-text" name="email" id="email" /><br />
+        <h3>Your age:</h3>
+        <br />
+        <input type="text" class="input-text" name="age" id="age" /><br />
+        <h3>You are:</h3>
+        <br />
+        <select name="type-select" class="select">
+          <option value="business">Business partner</option>
+          <option value="customer">Customer</option>
+          <option value="staff">Staff</option>
+        </select>
+        <br />
+        <h3>Terms and Conditions</h3>
+        <br />
+        <div class="terms">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            lacinia vitae mi vel dapibus. Cras eget neque sed felis congue
+            tristique ultrices vitae lacus. Duis quis lacus porta, iaculis nulla
+            id, vestibulum enim. Donec tincidunt facilisis sagittis. Aenean vel
+            lectus id eros vulputate tempor. Nunc vestibulum, mi sit amet
+            convallis laoreet, nisl massa congue felis, quis laoreet odio lacus
+            sed ante. Etiam egestas arcu ut odio dignissim, eget pretium ipsum
+            lacinia. Praesent laoreet varius mauris, ut scelerisque tellus
+            tempus at. Etiam at nulla ac risus lacinia commodo. Quisque at risus
+            enim. Maecenas accumsan urna sapien, malesuada auctor nulla
+            sollicitudin sed.
+          </p>
+
+          <p>
+            Nullam eget ante vitae turpis accumsan semper. Fusce vel nisl
+            sollicitudin, viverra ante ac, semper turpis. Fusce aliquam urna ut
+            nibh sagittis pellentesque non ac est. Aenean maximus orci tellus,
+            eu pellentesque justo euismod vitae. Curabitur venenatis porttitor
+            urna ac ultricies. Duis arcu ligula, faucibus sit amet dolor a,
+            viverra sollicitudin risus. Nam facilisis, magna sit amet vestibulum
+            imperdiet, erat ligula mattis est, sed ultricies ante ante sit amet
+            mauris. Integer eget tristique ex. Donec purus diam, volutpat a sem
+            nec, vulputate consectetur odio. Ut id justo tellus. Ut eget erat ut
+            est accumsan efficitur. Maecenas a ligula ut magna mollis lacinia
+            sit amet non arcu. Nulla eu velit dapibus, vehicula justo quis,
+            blandit arcu. Proin quis facilisis sem, vel venenatis lectus. In ut
+            orci porttitor, condimentum justo ac, mattis urna.
+          </p>
+
+          <p>
+            Suspendisse et neque enim. Aliquam nulla est, tempus nec diam sit
+            amet, condimentum aliquam arcu. Sed tempus dui eu gravida rutrum.
+            Morbi viverra augue orci, vel consequat erat posuere ut. Nullam vel
+            elit massa. Aenean porttitor mi sit amet dolor pharetra, ac
+            porttitor metus accumsan. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aenean vitae
+            posuere elit, non sollicitudin lectus. Pellentesque a ante quis
+            tortor tempus ultrices ac eu est. Aenean tempor lacinia sem, eu
+            dignissim risus posuere ac. Vestibulum tristique risus et augue
+            ultrices egestas non vel nisl. Etiam orci velit, laoreet ac semper
+            pharetra, condimentum malesuada nisl. Nulla viverra quam placerat
+            dui posuere, a maximus lorem efficitur. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+
+          <p>
+            Ut rutrum urna porttitor metus consequat euismod. Etiam tempor magna
+            vel aliquet egestas. Etiam ultrices ligula libero, id tempor libero
+            placerat a. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos. Donec rhoncus augue et nibh
+            dictum, vel luctus odio scelerisque. Pellentesque non nisi vehicula,
+            ullamcorper tortor id, lacinia nisi. Pellentesque sit amet lacus id
+            nibh ullamcorper faucibus. Aliquam accumsan augue sit amet lectus
+            congue luctus. Integer quis ipsum ut diam iaculis euismod a eu diam.
+            Quisque ex ex, eleifend vitae posuere facilisis, facilisis et elit.
+            Fusce ornare nulla vel tellus tristique, sit amet venenatis est
+            aliquet. Duis accumsan condimentum condimentum.
+          </p>
+
+          <p>
+            Ut id est lacus. Sed eu vestibulum orci. Nam metus lorem, sagittis
+            quis ipsum ac, molestie aliquam nisi. Nullam nec bibendum est. Sed
+            iaculis ut elit ut tincidunt. Nullam gravida purus id faucibus
+            feugiat. Vivamus ut diam non nulla volutpat congue non ut orci. Nunc
+            efficitur varius diam ac consequat. Aliquam venenatis viverra
+            posuere. Nunc mollis dictum auctor. Morbi sed leo sit amet magna
+            pellentesque imperdiet.
+          </p>
+
+          <p>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Suspendisse eleifend volutpat nisl, sit amet
+            placerat arcu tincidunt ac. Phasellus luctus velit vel libero
+            viverra suscipit. Nam tincidunt facilisis ultrices. Sed tincidunt
+            lacinia velit at malesuada. Maecenas ex nunc, bibendum ut porttitor
+            id, tempor fringilla diam. Nunc in accumsan erat.
+          </p>
+
+          <p>
+            Integer nec mauris neque. Maecenas condimentum dignissim commodo.
+            Quisque imperdiet, tellus condimentum imperdiet elementum, ex ligula
+            aliquam risus, vitae eleifend lacus enim eget massa. Aenean eget mi
+            in neque gravida elementum. Maecenas bibendum accumsan quam, non
+            ornare magna efficitur lacinia. Mauris suscipit, enim et auctor
+            auctor, erat est laoreet augue, quis bibendum lacus arcu vitae
+            lorem. Ut eget augue in magna elementum blandit in ac tellus.
+            Praesent a massa sit amet eros tristique tempus ut sed mauris.
+            Aenean rutrum sem at lacus pulvinar fermentum vitae nec arcu.
+            Phasellus ut justo turpis. Integer luctus elit et ante euismod
+            gravida. Nunc urna mauris, posuere at malesuada eget, tempor a urna.
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Sed sagittis et nulla id rhoncus. Vivamus
+            laoreet mi sit amet nulla scelerisque luctus.
+          </p>
+
+          <p>
+            Maecenas porta orci laoreet magna fermentum auctor id lobortis
+            tortor. Nam auctor nisi neque, in mattis dui mattis eu. Cras vitae
+            rhoncus ex. Mauris rhoncus facilisis sapien, id egestas quam
+            facilisis nec. Aenean vitae nunc maximus, tristique risus quis,
+            consectetur tellus. Phasellus orci leo, congue vel fringilla non,
+            hendrerit a erat. Praesent sagittis lacinia consequat. Duis lobortis
+            nulla vitae odio consequat, eget mollis nulla finibus. Pellentesque
+            tempus commodo pellentesque. Pellentesque condimentum laoreet justo,
+            sit amet hendrerit ipsum pellentesque sed. Praesent ultricies nisl
+            ut velit dignissim fringilla.
+          </p>
+
+          <p>
+            Aenean eleifend ornare metus, ut sagittis risus bibendum in. Aenean
+            sed mollis lectus, non tempor velit. Nam quis aliquet velit. Donec
+            ac tellus risus. Sed placerat accumsan leo, egestas placerat nunc
+            dapibus sed. Nam eu augue a libero cursus lobortis sit amet sit amet
+            lectus. Maecenas dapibus vel risus ultricies pellentesque. Fusce
+            ornare feugiat nibh, eu semper justo convallis quis. Vestibulum ante
+            ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+            Curae; Nam sagittis eleifend lobortis.
+          </p>
+
+          <p>
+            Proin dapibus vestibulum felis sed vehicula. Sed volutpat venenatis
+            est a blandit. Praesent cursus elementum sapien ac ullamcorper. Sed
+            posuere augue massa, vel vulputate mauris rhoncus a. Cras egestas
+            dui metus, vel vehicula urna vestibulum ut. Maecenas facilisis eu
+            nunc id gravida. Sed non quam interdum mauris vehicula rutrum. Donec
+            a mollis magna. Mauris non enim in metus lacinia euismod. Donec a mi
+            ut ipsum egestas accumsan. Duis eget orci ornare, faucibus lectus
+            eu, tempor elit.
+          </p>
+        </div>
+        <br />
+        <label class="container" id="termsContainer"
+          >I have read and agree to the Terms and Conditions and Privacy Policy
+          <input type="checkbox" id="terms" />
+          <span class="checkmark-checkbox"></span>
+        </label>
+        <br />
+        <input type="submit" value="Submit" class="button" />
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

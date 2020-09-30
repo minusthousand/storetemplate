@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+Mihails Tumaševičs mt19031
+-->
+<html lang="en">
+  <head>
+    <title>MTSTORE</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <h3>MTSTORE</h3>
+        <div class="logo"></div>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html" id="home">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="sale.html" id="sale">SALE</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="about.html" id="about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="register.html" id="Register">Register</a>
+          </li>
+        </ul>
+        <div class="close" onclick="fadeOut()">
+          <div class="close__line"></div>
+          <div class="close__line"></div>
+        </div>
+      </nav>
+
+      <div class="burger" onclick="fadeIn()">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </div>
+    </header>
+
+    <div class="main-coll">
+      <div class="about-header">
+        ABOUT MTSTORE
+        <div class="logo"></div>
+      </div>
+      <p>but actually it's exam required stuff.</p>
+    </div>
+
+    <div class="content">
+      <h2>List</h2>
+      <h4>Unordered</h4>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+        <li>Nunc dignissim risus id metus.</li>
+      </ul>
+
+      <h4>Ordered</h4>
+      <ol>
+        <li>Cras ornare tristique elit.</li>
+        <li>Vivamus vestibulum ntulla nec ante.</li>
+        <li>Praesent placerat risus quis eros.</li>
+        <li>Fusce pellentesque suscipit nibh.</li>
+      </ol>
+
+      <h2>Paragraph with line breaks</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+        Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.
+        Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+        <br />
+
+        Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris
+        sit amet orci. Aenean dignissim pellentesque felis. <br />
+
+        Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod
+        in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. <br />
+      </p>
+
+      <p><b>bold bold bold</b></p>
+      <p><i>italics italics italics</i></p>
+
+      <h2>Images</h2>
+      <h4>Black logo</h4>
+      <img src="logo/LOGOBLCK.jpg" alt="Something went wrong" />
+      <h4>White logo</h4>
+      <img src="logo/LOGOWHITE.jpg" alt="Something went wrong" />
+      <h4>Negative space logo</h4>
+      <img src="logo/LOGONEG.jpg" alt="Something went wrong" />
+      <h2>JQuery DOM manipulaitons</h2>
+      <h2 class="blue">Shopping cart</h2>
+      <br />
+      <select name="product" class="select" id="select-product">
+        <option value="0">Product 0#</option>
+        <option value="1">Product 1#</option>
+        <option value="2">Product 2#</option>
+        <option value="3">Product 3#</option>
+        <option value="4">Product 4#</option>
+        <option value="5">Product 5#</option>
+        <option value="6">Product 6#</option>
+        <option value="7">Product 7#</option>
+      </select>
+      <br />
+      <button class="button" id="add">Add</button>
+      <button class="button" id="remove">Remove last</button>
+      <table id="cart"></table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      const prices = [9.99, 19.99, 29.99, 39.99, 49.99, 59.99, 69.99, 79.99];
+      const $add = $("#add");
+      const $remove = $("#remove");
+      const $cart = $("#cart");
+      let rows = 0;
+      let total;
+
+      function addTotal() {
+        $("#total").remove();
+        total = 0;
+        $(".price").each(function(index) {
+          total += parseFloat($(this).text());
+        });
+        $cart.after('<h3 id="total">' + "Total: " + total.toFixed(2) + "€<h3>");
+      }
+
+      $add.on("click", function() {
+        let $product = $("#select-product").val();
+        rows++;
+        if (rows == 1) {
+          $cart.append(
+            '<tr class="head"><th>' +
+              "Product" +
+              "</th><th>" +
+              "Price" +
+              "</th></tr>"
+          );
+        }
+        $cart.append(
+          "<tr><td>" +
+            "Product " +
+            $product +
+            "#" +
+            '</td><td class="price">' +
+            prices[Number($product)] +
+            "€" +
+            "</td></tr>"
+        );
+        addTotal();
+      });
+
+      $remove.on("click", function() {
+        if (rows != 0) {
+          rows--;
+        }
+        $("#cart tr:last-child").remove();
+        addTotal();
+        if (rows == 0) {
+          $("#total").remove();
+          $("#cart tr:last-child").remove();
+        }
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
